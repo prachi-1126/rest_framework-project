@@ -137,3 +137,6 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+# TEMPORARY: This will print to your terminal when the server starts
+print(f"Django REST Framework settings loaded: {REST_FRAMEWORK}")
