@@ -23,6 +23,7 @@ class StudentViewSet(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
+    lookup_field = 'student_id'     #  newly added line
 
 
 # The view to handle password reset requests
