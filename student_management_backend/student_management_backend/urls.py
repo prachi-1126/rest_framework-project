@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from students_api.views import PasswordResetRequestView, PasswordResetConfirmView
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
 
 urlpatterns = [
@@ -25,7 +24,5 @@ urlpatterns = [
     # --- Add the URL paths for token-based authentication ---
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    # --- Add the URL paths for password reset ---
-     path('api/password/reset/', PasswordResetRequestView.as_view(), name='password_reset_request_api'),
-    path('api/password/reset/confirm/', PasswordResetConfirmView.as_view(), name='password_reset_confirm_api'),
+   
 ]
